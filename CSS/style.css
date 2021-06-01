@@ -1,0 +1,87 @@
+.notificacion{
+	margin-left: -30%;
+	border-radius: 50%;
+	font-size: 9px;
+	background-color: rgb(255, 0, 0);
+}
+.imgan{
+	border-color: darkcyan;
+}
+.titulo h1{
+	color: #463939;
+	font-family: Baskerville Old Face;
+}
+.titulo{
+	padding: 2%;
+}
+.contenedor-slider{
+	height: 400px;
+}
+.circulos1 {
+	z-index: 2;
+	padding: 10%;
+    width: 280px;
+    height: 350px;
+    background-color: rgb(0, 0, 0, 0.2);
+    border-radius: 50% ;
+}
+.circulos1 img{
+	width: auto;
+    height: 450px;
+	transform: translate(-25%,-25%);
+	
+}
+.circulos {
+    width: 146px;
+    height: 180px;
+    background-color: rgb(0, 0, 0, 0.2);
+    border-radius: 50% ;
+}
+.circulos img{
+	width: auto;
+    height: 180px;
+	transform: translate(15%,-5%);
+}
+.boton-slider{
+	float: left;
+	color: #000000;
+	opacity: 0.5;
+}
+.boton-slider span{
+	font-size: 25px;
+}
+.boton-slider a{
+	text-decoration: none;
+	font-size: 25px;
+}
+
+.fondoCarrito{
+	background: url(../ASSETS/carritoDecompras.jpg);
+	height: 30vh;
+	background-image: no-repeat;
+	background-image: fixed;
+	background-image: center;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fondoCarrito:before {
+	content:'';
+	position: absolute;
+        top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(6, 236, 95, 0.562);
+}
+.fondoCarrito h1{
+	font-family: 'Times New Roman', Times, serif;
+	color: white;
+	position: relative;
+}
+.contenedorPrincipal{
+	margin-bottom: 20%;
+}
