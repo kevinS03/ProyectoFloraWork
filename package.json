@@ -1,0 +1,22 @@
+{
+  "name": "basico-express",
+  "version": "1.0.0",
+  "description": "Prueba del framework",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinS03/ProyectoFloraWork.git"
+  },
+  "keywords": [
+    "Flora"
+  ],
+  "author": "Kevin Santamaria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinS03/ProyectoFloraWork/issues"
+  },
+  "homepage": "https://github.com/kevinS03/ProyectoFloraWork#readme"
+}
