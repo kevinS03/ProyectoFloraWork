@@ -14,13 +14,18 @@ app.post("/validarDatos",function(req,res){
     var contra = req.body.pass;
     if(usuario == "admin@admin.com" && contra =="123456") {
         res.redirect("/principal");
-    }else{
+    }else if(usuario == "cliente@cliente.com" && contra =="123456"){
+		res.redirect("/invitado");
+	}else{
         res.redirect("/error");
     }
 })
 
 app.get("/principal",function(req,res){
     res.redirect("/pages/panel.html");
+});
+app.get("/invitado",function(req,res){
+    res.redirect("/index.html");
 });
 
 app.get("/error",function(req,res){
