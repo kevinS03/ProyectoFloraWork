@@ -68,7 +68,19 @@
   justify-content: center;
   align-items: center;
 }
-.fondoCarrito:before {
+.fondoEmail{
+	background: url(../ASSETS/EmailTop.jpg);
+	height: 50vh;
+	background-image: no-repeat;
+	background-image: fixed;
+	background-image: center;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.fondoCarrito:before, .fondoEmail:before {
 	content:'';
 	position: absolute;
         top: 0;
@@ -77,10 +89,28 @@
 	right: 0;
 	background-color: rgba(6, 236, 95, 0.562);
 }
-.fondoCarrito h1{
+.fondoCarrito h1, .fondoEmail h1{
 	font-family: 'Times New Roman', Times, serif;
 	color: white;
 	position: relative;
+}
+.fondoEmail p{
+	font-family: 'Times New Roman', Times, serif;
+	color: white;
+	position: relative;
+	font-size: 20px;
+}
+.fondoContato{
+	background: url(../ASSETS/imagenContactos.png);
+	height: 70vh;
+	background-image: no-repeat;
+	background-image: fixed;
+	background-image: center;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 .contenedorPrincipal{
 	margin-bottom: 20%;
