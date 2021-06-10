@@ -9,13 +9,13 @@ const baseDeDatos = [
     {
         id: 1,
         nombre: 'Mango toro',
-        precio: 5.00,
+        precio: 5.0,
         imagen: './ASSETS/maceta-mango.jpg'
     },
     {
         id: 2,
         nombre: 'Manzanilla',
-        precio: 9.99,
+        precio: 9.9,
         imagen: './ASSETS/maceta-manzanilla.jpg'
     },
     {
@@ -51,23 +51,14 @@ var contadorSpan = 0;
 const DOMitems = document.querySelector('#items');
 const DOMcarrito = document.querySelector('#carrito');
 const DOMtotal = document.querySelector('#total');
-const DOMbotonVaciar = document.querySelector('#boton-vaciar');
+const DOMbotonVaciar = document.querySelector('#boton-vaciar')
 const DOMspanCarrito = document.querySelector('#spanCarrito');
 
 function renderizarProductos() {
     baseDeDatos.forEach((info) => {
         // Estructura
         const miNodo = document.createElement('div');
-        miNodo.classList.add('col-sm-4','mt-1');
-		// Estructura2
-        const miNodocard = document.createElement('div');
-        miNodocard.classList.add('card');
-		miNodocard.style.cssText = 'width: 18rem;';
-		 // Imagen
-		 const miNodoImagen = document.createElement('div');
-		 miNodoImagen.classList.add('card-img-top');
-		 miNodoImagen.style.cssText = 'background: url('+ info.imagen +');height: 11rem;background-image: no-repeat;background-image: fixed;background-image: center;background-size: cover;';
-		
+        miNodo.classList.add('card', 'col-sm-4');
         // Body
         const miNodoCardBody = document.createElement('div');
         miNodoCardBody.classList.add('card-body');
@@ -75,39 +66,34 @@ function renderizarProductos() {
         const miNodoTitle = document.createElement('h5');
         miNodoTitle.classList.add('card-title');
         miNodoTitle.textContent = info.nombre;
-       
+        // Imagen
+        const miNodoImagen = document.createElement('img');
+        miNodoImagen.classList.add('card-img-top');
+        miNodoImagen.setAttribute('src', info.imagen);
+		miNodoImagen.style.cssText = 'width: 10rem;';
         // Precio
         const miNodoPrecio = document.createElement('p');
         miNodoPrecio.classList.add('card-text');
-        miNodoPrecio.textContent = info.precio + '$';
+        miNodoPrecio.textContent = info.precio + '€';
         // Boton 
         const miNodoBoton = document.createElement('button');
         miNodoBoton.classList.add('btn', 'btn-primary');
+        miNodoBoton.textContent = '+';
         miNodoBoton.setAttribute('marcador', info.id);
         miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
-
-		// icono
-		const miNodoIconB = document.createElement('li');
-		miNodoIconB.classList.add('fas','fa-shopping-basket');
-
         // Insertamos
-		miNodoBoton.appendChild(miNodoIconB);
         miNodoCardBody.appendChild(miNodoImagen);
         miNodoCardBody.appendChild(miNodoTitle);
         miNodoCardBody.appendChild(miNodoPrecio);
         miNodoCardBody.appendChild(miNodoBoton);
-		miNodocard.appendChild(miNodoCardBody);
-        miNodo.appendChild(miNodocard);
+        miNodo.appendChild(miNodoCardBody);
         DOMitems.appendChild(miNodo);
     });
-
-	
-	
 }
 
 function anyadirProductoAlCarrito(evento) {
     // Anyadimos el Nodo a nuestro carrito
-    carrito.push(evento.target.getAttribute('marcador'));
+    carrito.push(evento.target.getAttribute('marcador'))
     // Calculo el total
     calcularTotal();
     // Actualizamos el carrito 
@@ -115,7 +101,7 @@ function anyadirProductoAlCarrito(evento) {
 	var valor = document.getElementById('spanCarrito').innerHTML;
 
 	if(valor == 0){
-		contadorSpan = 1;
+		contadorSpan = 1
 	}else{
 		contadorSpan += 1;
 	}
@@ -205,7 +191,8 @@ function vaciarCarrito() {
 			document.getElementById('spanCarrito').innerHTML=' '+ 0;
 }
 
-// Inicio
-renderizarProductos();
 // Eventos
 DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+
+// Inicio
+renderizarProductos();
