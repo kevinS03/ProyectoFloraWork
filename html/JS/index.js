@@ -58,7 +58,16 @@ function renderizarProductos() {
     baseDeDatos.forEach((info) => {
         // Estructura
         const miNodo = document.createElement('div');
-        miNodo.classList.add('card', 'col-sm-4');
+        miNodo.classList.add('col-sm-4','mt-1');
+		// Estructura2
+        const miNodocard = document.createElement('div');
+        miNodocard.classList.add('card');
+		miNodocard.style.cssText = 'width: 18rem;';
+		 // Imagen
+		 const miNodoImagen = document.createElement('div');
+		 miNodoImagen.classList.add('card-img-top');
+		 miNodoImagen.style.cssText = 'background: url('+ info.imagen +');height: 11rem;background-image: no-repeat;background-image: fixed;background-image: center;background-size: cover;';
+		
         // Body
         const miNodoCardBody = document.createElement('div');
         miNodoCardBody.classList.add('card-body');
@@ -66,29 +75,34 @@ function renderizarProductos() {
         const miNodoTitle = document.createElement('h5');
         miNodoTitle.classList.add('card-title');
         miNodoTitle.textContent = info.nombre;
-        // Imagen
-        const miNodoImagen = document.createElement('img');
-        miNodoImagen.classList.add('card-img-top');
-        miNodoImagen.setAttribute('src', info.imagen);
-		miNodoImagen.style.cssText = 'width: 10rem;';
+       
         // Precio
         const miNodoPrecio = document.createElement('p');
         miNodoPrecio.classList.add('card-text');
-        miNodoPrecio.textContent = info.precio + '€';
+        miNodoPrecio.textContent = info.precio + '$';
         // Boton 
-        const miNodoBoton = document.createElement('button');
+        const miNodoBoton = document.createElement('a');
         miNodoBoton.classList.add('btn', 'btn-primary');
-        miNodoBoton.textContent = '+';
         miNodoBoton.setAttribute('marcador', info.id);
         miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
+
+		// icono
+		const miNodoIconB = document.createElement('li');
+		miNodoIconB.classList.add('fas','fa-shopping-basket');
+
         // Insertamos
+		miNodoBoton.appendChild(miNodoIconB);
         miNodoCardBody.appendChild(miNodoImagen);
         miNodoCardBody.appendChild(miNodoTitle);
         miNodoCardBody.appendChild(miNodoPrecio);
         miNodoCardBody.appendChild(miNodoBoton);
-        miNodo.appendChild(miNodoCardBody);
+		miNodocard.appendChild(miNodoCardBody);
+        miNodo.appendChild(miNodocard);
         DOMitems.appendChild(miNodo);
     });
+
+	
+	
 }
 
 function anyadirProductoAlCarrito(evento) {
@@ -196,3 +210,5 @@ DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 
 // Inicio
 renderizarProductos();
+const noticias = document.querySelectorAll('.card');
+console.log(noticias);
