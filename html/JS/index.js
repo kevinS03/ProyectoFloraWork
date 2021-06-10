@@ -81,7 +81,7 @@ function renderizarProductos() {
         miNodoPrecio.classList.add('card-text');
         miNodoPrecio.textContent = info.precio + '$';
         // Boton 
-        const miNodoBoton = document.createElement('a');
+        const miNodoBoton = document.createElement('button');
         miNodoBoton.classList.add('btn', 'btn-primary');
         miNodoBoton.setAttribute('marcador', info.id);
         miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
