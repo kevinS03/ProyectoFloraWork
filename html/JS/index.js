@@ -9,13 +9,13 @@ const baseDeDatos = [
     {
         id: 1,
         nombre: 'Mango toro',
-        precio: 5.0,
+        precio: 5.00,
         imagen: './ASSETS/maceta-mango.jpg'
     },
     {
         id: 2,
         nombre: 'Manzanilla',
-        precio: 9.9,
+        precio: 9.99,
         imagen: './ASSETS/maceta-manzanilla.jpg'
     },
     {
@@ -51,7 +51,7 @@ var contadorSpan = 0;
 const DOMitems = document.querySelector('#items');
 const DOMcarrito = document.querySelector('#carrito');
 const DOMtotal = document.querySelector('#total');
-const DOMbotonVaciar = document.querySelector('#boton-vaciar')
+const DOMbotonVaciar = document.querySelector('#boton-vaciar');
 const DOMspanCarrito = document.querySelector('#spanCarrito');
 
 function renderizarProductos() {
@@ -107,7 +107,7 @@ function renderizarProductos() {
 
 function anyadirProductoAlCarrito(evento) {
     // Anyadimos el Nodo a nuestro carrito
-    carrito.push(evento.target.getAttribute('marcador'))
+    carrito.push(evento.target.getAttribute('marcador'));
     // Calculo el total
     calcularTotal();
     // Actualizamos el carrito 
@@ -115,7 +115,7 @@ function anyadirProductoAlCarrito(evento) {
 	var valor = document.getElementById('spanCarrito').innerHTML;
 
 	if(valor == 0){
-		contadorSpan = 1
+		contadorSpan = 1;
 	}else{
 		contadorSpan += 1;
 	}
@@ -205,10 +205,7 @@ function vaciarCarrito() {
 			document.getElementById('spanCarrito').innerHTML=' '+ 0;
 }
 
-// Eventos
-DOMbotonVaciar.addEventListener('click', vaciarCarrito);
-
 // Inicio
 renderizarProductos();
-const noticias = document.querySelectorAll('.card');
-console.log(noticias);
+// Eventos
+DOMbotonVaciar.addEventListener('click', vaciarCarrito);
