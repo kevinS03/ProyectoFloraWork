@@ -55,10 +55,23 @@ const DOMbotonVaciar = document.querySelector('#boton-vaciar')
 const DOMspanCarrito = document.querySelector('#spanCarrito');
 
 function renderizarProductos() {
+	const ingreso1 = document.createElement('div');
+	ingreso1.classList.add('row');
+	DOMitems.appendChild(ingreso1);
     baseDeDatos.forEach((info) => {
+		const ingreso = document.createElement('div');
+		ingreso.classList.add('col-sm-4');
         // Estructura
         const miNodo = document.createElement('div');
-        miNodo.classList.add('card', 'col-sm-4');
+        miNodo.classList.add('col-sm-4');
+
+		const miNodo2 = document.createElement('div');
+        miNodo2.classList.add('card');
+		miNodo2.style.cssText = 'width: 18rem;   height: 60vh;';
+        // Imagen
+        const miNodoImagen = document.createElement('img');
+        miNodoImagen.classList.add('card-img-top');
+        miNodoImagen.setAttribute('src', info.imagen);
         // Body
         const miNodoCardBody = document.createElement('div');
         miNodoCardBody.classList.add('card-body');
@@ -66,11 +79,6 @@ function renderizarProductos() {
         const miNodoTitle = document.createElement('h5');
         miNodoTitle.classList.add('card-title');
         miNodoTitle.textContent = info.nombre;
-        // Imagen
-        const miNodoImagen = document.createElement('img');
-        miNodoImagen.classList.add('card-img-top');
-        miNodoImagen.setAttribute('src', info.imagen);
-		miNodoImagen.style.cssText = 'width: 10rem;';
         // Precio
         const miNodoPrecio = document.createElement('p');
         miNodoPrecio.classList.add('card-text');
@@ -78,16 +86,18 @@ function renderizarProductos() {
         // Boton 
         const miNodoBoton = document.createElement('button');
         miNodoBoton.classList.add('btn', 'btn-primary');
-        miNodoBoton.textContent = '+';
+        miNodoBoton.textContent = 'Comprar';
         miNodoBoton.setAttribute('marcador', info.id);
         miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
         // Insertamos
-        miNodoCardBody.appendChild(miNodoImagen);
         miNodoCardBody.appendChild(miNodoTitle);
         miNodoCardBody.appendChild(miNodoPrecio);
         miNodoCardBody.appendChild(miNodoBoton);
-        miNodo.appendChild(miNodoCardBody);
-        DOMitems.appendChild(miNodo);
+		miNodo2.appendChild(miNodoImagen);
+        miNodo2.appendChild(miNodoCardBody);
+		miNodo.appendChild(miNodo2);
+        ingreso.appendChild(miNodo);
+		ingreso1.appendChild(ingreso);
     });
 }
 
