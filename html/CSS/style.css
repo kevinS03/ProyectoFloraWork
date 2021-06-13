@@ -22,7 +22,7 @@
 	padding: 10%;
     width: 280px;
     height: 350px;
-    background-color: rgb(0, 0, 0, 0.2);
+    background-color: rgb(255, 54, 230, 0.2);
     border-radius: 50% ;
 }
 .circulos1 img{
@@ -34,7 +34,7 @@
 .circulos {
     width: 146px;
     height: 180px;
-    background-color: rgb(0, 0, 0, 0.2);
+    background-color: rgb(255, 54, 230, 0.2);
     border-radius: 50% ;
 }
 .circulos img{
@@ -174,14 +174,14 @@
 	background-color: #ffeafa;
 }
 .blog{
-	width: 80%;
+	width: 85%;
 	height: auto;
 	overflow: hidden;
 	margin: 10px auto;
 }
 
 .publicaciones{
-	width: 70%;
+	width: 100%;
 	height: auto;
 	overflow: hidden;
 	margin-top: 10px;
@@ -195,13 +195,13 @@
 	background: #f1ffed;
 	border-left: 5px solid #258a08;
 	border-radius: 15px;
-	margin-bottom: 15px;
+	margin-bottom: 0px;
 }
 
 .enlace-post h2{
 	text-decoration: none;
 	color: #000;
-	font-size: 22px;
+	font-size: 36px;
 }
 
 .enlace-post h2:hover{
@@ -211,55 +211,27 @@
 .parrafo-post{
 	line-height: 1;
 	text-align: justify;
-	font-size: 12px;
+	font-size: 17px;
 	padding: 3px;
 }
 
 .publicaciones .img-post{
-	width: 150px;
-	height: 100px;
+	width: 200px;
+	height: 150px;
 	float: left;
-	margin-top: 4px;
+	margin: 4px 4px 25px 0px;
 	padding: 3px;
-	border: 1px solid #cccccc;
-}
-
-.datos-post{
-	color: #1e9d32;
+	border: 1px solid #cccccc;	
 }
 
 .leer-mas{
-	background: #1e9d32;
+	background: transparent;
 	color: #000000;
-	border: 0px;
-	border-radius: 5px;
-	margin: 5px;
-	text-decoration: none;
-	padding: 5px;
-	
-}
-.comentarios-post{
-	background: #236a1e;
-	color: #ffffff;
-	border: 0px;
-	border-radius: 5px;
 	text-decoration: none;
 	padding: 5px;
 }
 
-.informacion{
-	width: 99%;
-	height: auto;
-	overflow: hidden;
-	padding: 7px;
-	background: #f1ffed;
-	border-left: 5px solid #258a08;
-	border-right: 5px solid #258a08;
-	border-radius: 15px;
-	margin-bottom: 15px;
-}
-
-.correo{
-	text-decoration: none;
-	color: #000000;
+hr{
+	border: 0px;
+	border-top: 1px dashed #cccccc;
 }
