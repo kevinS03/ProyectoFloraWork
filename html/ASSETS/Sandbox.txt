@@ -1,0 +1,16 @@
+pagina:https://www.sandbox.paypal.com/
+
+Sandbox: sb-jqmqv6683364@business.example.com  password: 2oJq^MJ=
+Client ID:
+ATYRaw1Oc4oZv6JN0PSO0KPDE_80CFw8DEGyuazT3FdDV4M9XmXQp27q4ju02HwT-FY8dcqbbVVU8ODp
+
+Secret:
+EGzQnUK9UE7lMbYzSfyilQSfV9fTuTEKujZWQ_Fy8lDjcev_sZbD5grwmobasVdHvZNmMu7KClvUtAjs
+
+Cuentas Fake: Tienda:
+                             Email ID: Don_dineros@business.example.com
+                             Password: ,p-/K0h4
+
+                             Cliente:
+                             Email ID: elesqueletico@personal.example.com
+                             Password: w&qfm[E7

@@ -273,6 +273,34 @@
 						<hr>
 						<!-- Precio total -->
 						<p class="text-right">Total: <span id="total"></span>&euro;</p>
+
+						<script src="https://www.paypal.com/sdk/js?client-id=ATYRaw1Oc4oZv6JN0PSO0KPDE_80CFw8DEGyuazT3FdDV4M9XmXQp27q4ju02HwT-FY8dcqbbVVU8ODp&disable-funding=credit,card"> // usa el id de la cuenta del cliente </script> 
+
+						<div id="paypal-button-container"></div>
+
+  						<script>
+  						paypal.Buttons({
+    					  createOrder: function(data, actions) {
+					        return actions.order.create({
+      						  purchase_units: [{
+    					      amount: {
+   					          value: '250.75'
+   						       }
+ 					         }]
+ 					      });
+ 					    },
+ 			  		  	  onApprove: function(data, actions) {
+					        return actions.order.capture().then(function(details) {
+					          alert('Transaction completed by ' + details.payer.name.given_name);
+						       });
+    						  },
+    					  onCancel: function(data) {
+    					  	alert('Transaction canceled');
+    					  }
+
+ 							 }).render('#paypal-button-container');
+						</script>
+
 						<button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
 					</aside>
 				</div>
